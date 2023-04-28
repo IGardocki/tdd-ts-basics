@@ -122,7 +122,7 @@ describe('myUnionType', () => {
 
 // FUNCTION TESTS
 describe('addCats function should', () => {
-    const res = addCats(1,1);
+    // const res = addCats(1,1);
 })
 
 
