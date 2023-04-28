@@ -1,7 +1,6 @@
-# TODO: intro type system
-# TODO: intro jest
+# TDD-TS-BASICS
+Welcome to the wonderful world of test driven development and Typescript! If you're looking to learn TDD principles while learning TypeScript syntax, you've come to the right place!
 
-# todo create acceptance test
-# create test folder, create npm npm scripts that run each section as a separate test- ie run a script for simple types, special types# tdd-ts-basics
-
-testtestest
+``` bash
+git clone test
+```
