@@ -55,7 +55,10 @@ const cat: ICat= {
 // UNION TYPES
 const myUnionType: string | number = 'hello world';
 
-
+// FUNCTIONS 
+function addCats(num1: number, num2:number): string {
+    return `I have ${num1 + num2} cats!`;
+}
 
 
 const story:string = 'I went to yoga'

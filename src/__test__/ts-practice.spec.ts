@@ -1,6 +1,5 @@
 import {myString, myNumber, myBoolean, myAnyType, myUndefined, myNull,
-myStringArr, myNumArr, myTuple, myPet, myCatEnum, myUnionType, catAge, theDetectiveAge} from '../ts-practice'
-
+myStringArr, myNumArr, myTuple, myPet, myCatEnum, myUnionType, catAge, theDetectiveAge} from '../ts-practice';
 
 // LOOP 1: a basic test that will pass ////////////////////////////
 describe('Test should', ()=> {
@@ -119,6 +118,11 @@ describe('myUnionType', () => {
         const typeCheck = typeof(myUnionType) === 'string' || typeof(myUnionType) === 'number';
         expect(typeCheck).toBe(true);
     })
+})
+
+// FUNCTION TESTS
+describe('addCats function should', () => {
+    const res = addCats(1,1);
 })
 
 
