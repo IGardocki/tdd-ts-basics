@@ -1,10 +1,13 @@
-// import {myString, myNumber, myBoolean, myAnyType, myUndefined, myNull,
-// myStringArr, myNumArr, myTuple, myPet, myCatEnum, myUnionType, catAge, theDetectiveAge} from '../ts-practice';
-
+// the below line will import everything (*)
+// as tsPractice (in other words, we will use tsPractice.<name of our function, variable, class, etc, to refer to it>)
+// from the file '../ts-practice (the file we will write our code in)'
 import * as tsPractice from '../ts-practice'
-// LOOP 1: a basic test that will pass ////////////////////////////
+
+// the describe block starts the testing block for your class, function, variable, etc
 describe('Test should', ()=> {
+    // the test block tests the specific functionality you want to test
     test('pass', () => {
+        //syntax here is: expect(<The Expected Value>).toBe(<What is returned>)
         expect(true).toBe(true);
     });
 });
@@ -41,8 +44,6 @@ describe('myBoolean should', () => {
 // SPECIAL TYPE TESTS
 describe('myAnyType should', () => {
     test('be of the correct type', () => {
-        // pick a type of the variable you will define, and update
-        // the code to reflect this!
         expect(typeof(tsPractice.myAnyType)).toBe('string')
     })
 })
@@ -152,6 +153,33 @@ describe('catClass should', () => {
         const cat = new tsPractice.catClass('Pickles', 'Sphinx');
         expect(cat.getName()).toBe('Pickles');
         expect(cat.getBreed()).toBe('Sphinx');
+    })
+})
+
+// GENERICS TESTS
+describe('createArr should', () => {
+    test('return an array with a string in the zeroth position, a number in the first, and a boolean in the second when those types are specified', () => {
+        const newArray = tsPractice.createArr<string, number, boolean>('vibes', 1, true);
+        expect(typeof(newArray[0])).toBe('string');
+        expect(typeof(newArray[1])).toBe('number');
+        expect(typeof(newArray[2])).toBe('boolean');
+        expect(newArray).toEqual(['vibes', 1, true]);
+    });
+    test('return an array with a strings in all positions when those types are specified', () => {
+        const newArray = tsPractice.createArr<string, string, string>('This is', 'a', 'vibe.');
+        expect(typeof(newArray[0])).toBe('string');
+        expect(typeof(newArray[1])).toBe('string');
+        expect(typeof(newArray[2])).toBe('string');
+        expect(newArray).toEqual(['This is', 'a', 'vibe.']);
+    });
+});
+
+describe('simpleGenericClass should', () => {
+    test('return a number given a number', () => {
+        const myGenericClass = new tsPractice.SimpleGenericClass<number>();
+        myGenericClass.setValue(4);
+        const res = myGenericClass.getValue();
+        expect(res).toBe(4);
     })
 })
 
