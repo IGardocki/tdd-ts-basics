@@ -15,6 +15,8 @@
 // the syntax here is- 
 // variableName: type = variableValue
 export const myString: string = 'Hello World';
+
+
 export const myNumber: number = 24;
 export const myBoolean: boolean = true;
 

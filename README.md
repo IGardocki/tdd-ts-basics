@@ -42,6 +42,9 @@ TypeScript is a typed version of JavaScript, meaning that devs can specify what 
 Category theory is an important foundation in understanding the typing systems of TS (and other programming languages!). You can learn more about it here: https://en.wikipedia.org/wiki/Category_theory.
 
 # Let's Get Started!
+
+* This tutorial assumes that you have both Node and Typescript already installed.
+
 In VSCode, let's press ctrl+shift+` to open a terminal. Then, let's rock a 
 ``` bash
 npm install
@@ -75,5 +78,15 @@ But what exactly is happening here?
 
 ###### Your turn
 Change this test so that it fails. And then, restore it so that it passes.
+
+##### Loop 2
+Neat! We've started to learn how to test. Next, copy and paste the following into ts-practice.spec.ts:
+``` typescript
+describe('Test should', () => {
+    test('pass', () => {
+        expect(true).toBe(true);
+    });
+});
+```
 
 
