@@ -8,6 +8,7 @@ describe('Test should', ()=> {
     // the test block tests the specific functionality you want to test
     test('pass', () => {
         //syntax here is: expect(<The Expected Value>).toBe(<What is returned>)
+        // In this case, this test will always pass. It doesn't really test anything, but is just an example.
         expect(true).toBe(true);
     });
 });
